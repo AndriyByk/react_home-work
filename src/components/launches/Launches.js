@@ -4,7 +4,7 @@ import Launch from "../launch/Launch";
 import "./Launches.css";
 
 export default function Launches() {
-    let [launchList, setLaunchList] = useState([]);
+    const [launchList, setLaunchList] = useState([]);
 
     useEffect(() => {
         fetch("https://api.spacexdata.com/v3/launches/")
@@ -20,9 +20,10 @@ export default function Launches() {
         <div className={"launches"}>
             {launchList.map((value) =>
                 <Launch
+                    key={value.launch_date_unix}
                     mission_name={value.mission_name}
                     launch_year={value.launch_year}
-                    links={value["links"]}
+                    mission_patch_small={value.links.mission_patch_small}
                 />
             )}
         </div>

@@ -1,7 +1,7 @@
 import "./Launch.css";
 
 export default function Launch (props) {
-    let {mission_name, launch_year, links} = props;
+    const {mission_name, launch_year, mission_patch_small} = props;
 
     return (
         <div className={"launch"}>
@@ -15,7 +15,7 @@ export default function Launch (props) {
             </div>
             <div className={"launch-picture-wrapper"}>
                 <div className={"launch-picture"}>
-                    <img src={links.mission_patch_small} alt="launch"/>
+                    <img src={mission_patch_small} alt="launch"/>
                 </div>
             </div>
         </div>
