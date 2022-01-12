@@ -1,0 +1,27 @@
+.launch-picture {
+    width: 250px
+}
+
+.launch {
+    display: flex;
+    border: black solid 1px;
+}
+
+.launch-details {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.launch-picture-wrapper {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.launch-details-mission_name {
+    font: bolder 20px Arial;
+}
