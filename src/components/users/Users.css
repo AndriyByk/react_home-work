@@ -1,0 +1,8 @@
+.users {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: aquamarine;
+    padding: 10px;
+    row-gap: 10px;
+}

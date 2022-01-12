@@ -1,0 +1,13 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    background-color: indianred;
+    row-gap: 3px;
+    padding: 3px;
+}
+
+.post-userId,
+.post-main > div,
+.post-id {
+    background-color: #e8b5b5;
+}

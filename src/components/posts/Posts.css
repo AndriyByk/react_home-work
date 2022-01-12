@@ -1,0 +1,7 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 10px;
+    row-gap: 10px;
+}

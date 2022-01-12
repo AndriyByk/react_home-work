@@ -1,0 +1,13 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    background-color: indianred;
+    row-gap: 3px;
+    padding: 3px;
+}
+
+.user-id,
+.user-nameDetails > div,
+.user-email {
+    background-color: #e8b5b5;
+}
