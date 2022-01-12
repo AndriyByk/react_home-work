@@ -5,7 +5,7 @@ import './Comments.css';
 
 export default function Comments() {
 
-    let [commentList, setCommentList] = useState([]);
+    const [commentList, setCommentList] = useState([]);
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/comments")

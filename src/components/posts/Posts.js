@@ -4,7 +4,7 @@ import Post from "../post/Post";
 import './Posts.css';
 
 export default function Posts () {
-    let [postList, setPostList] = useState([]);
+    const [postList, setPostList] = useState([]);
 
     useEffect(() => {
         fetch( "https://jsonplaceholder.typicode.com/posts")
