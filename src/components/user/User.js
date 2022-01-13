@@ -1,7 +1,7 @@
 import './User.css';
 
 export default function User (props) {
-    let {id, name, username, email} = props;
+    const {id, name, username, email} = props;
 
     return (
         <div className={"user"}>

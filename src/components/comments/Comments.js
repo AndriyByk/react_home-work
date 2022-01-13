@@ -17,6 +17,7 @@ export default function Comments() {
         <div className={"comments"}>
             {commentList.map((value) =>
                 <Comment
+                    key={value.id}
                     postId={value.postId}
                     id={value.id}
                     name={value.name}

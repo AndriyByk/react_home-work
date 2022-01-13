@@ -16,6 +16,7 @@ export default function Users() {
         <div className={"users"}>
         {userList.map((value) =>
                 <User
+                    key={value.id}
                     id={value.id}
                     name={value.name}
                     username={value.username}

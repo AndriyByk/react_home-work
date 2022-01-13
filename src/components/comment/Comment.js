@@ -1,7 +1,7 @@
 import './Comment.css';
 
 export default function Comment(props) {
-    let {postId, id, name, email, body} = props;
+    const {postId, id, name, email, body} = props;
 
     return (
         <div className={"comment"}>

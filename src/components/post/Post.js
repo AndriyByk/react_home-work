@@ -1,7 +1,7 @@
 import './Post.css';
 
 export default function Post (props) {
-    let {userId, id, title, body} = props;
+    const {userId, id, title, body} = props;
     return (
         <div className={"post"}>
             <div className={"post-userId"}>

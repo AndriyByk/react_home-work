@@ -16,6 +16,7 @@ export default function Posts () {
         <div className={"posts"}>
             {postList.map((value) =>
                 <Post
+                    key={value.id}
                     userId={value.userId}
                     id={value.id}
                     title={value.title}
