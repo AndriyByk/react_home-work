@@ -8,6 +8,7 @@ import User from "./components/User/User";
 
 function App() {
     const [allUsers, setAllUsers] = useState([]);
+    const [allUsersInitial, setAllUsersInitial] = useState([]);
 
     const [name, setName] = useState('');
     const [userName, setUserName] = useState('');
@@ -17,14 +18,13 @@ function App() {
         userService.getAll()
             .then(value => {
                 setAllUsers(value);
+                setAllUsersInitial(value);
             });
     }, []);
 
     const find = (e) => {
-        userService.getAll().then(value => setAllUsers(value));
         e.preventDefault();
-        setAllUsers(allUsers.filter(value => {
-            console.log(value);
+        setAllUsers(allUsersInitial.filter(value => {
             return (value.name.toUpperCase().includes(name.toUpperCase())
                 && value.username.toUpperCase().includes(userName.toUpperCase())
                 && value.email.includes(email));
