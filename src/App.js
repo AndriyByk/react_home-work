@@ -3,13 +3,13 @@ import './App.css';
 import Posts from './components/Posts/Posts';
 import Users from "./components/Users/Users";
 import {useState} from "react";
+import {userService} from "./services/user.service";
 
 function App() {
     const [posts, setPosts] = useState([]);
 
     const getUserPosts = (userId) => {
-        fetch('https://jsonplaceholder.typicode.com/posts?userId=' + userId)
-            .then(value => value.json())
+       userService.getPostsOfUser(userId)
             .then(value => setPosts(value))
     }
 

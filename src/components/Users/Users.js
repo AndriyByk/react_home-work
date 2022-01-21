@@ -3,14 +3,14 @@ import React, {useState} from 'react';
 import Short from "./Short/Short";
 import Full from "./Full/Full";
 import '../../App.css';
+import {userService} from "../../services/user.service";
 
 const Users = ({getUserPosts}) => {
 
     const [user, setUser] = useState(null);
 
     const getUserInfo = (id) => {
-            fetch('https://jsonplaceholder.typicode.com/users/' + id)
-                .then(value => value.json())
+            userService.getById(id)
                 .then(value => setUser(value))
     }
 
