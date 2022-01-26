@@ -1,0 +1,15 @@
+.inputs_wrapper {
+    display: flex;
+}
+
+.inputs {
+    min-width: 300px;
+}
+
+.label {
+    min-width: 100px;
+}
+
+.form-item {
+    display: flex;
+}
