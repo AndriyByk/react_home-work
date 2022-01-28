@@ -1,12 +1,11 @@
 import React from 'react';
 
-const FilterButton = () => {
+import './../../Form.css';
 
-
+const FilterButton = ({filter, handleSubmit}) => {
     return (
         <div className={'button'}>
-            {/*<button onClick={func()}>*/}
-            <button>
+            <button onClick={handleSubmit(filter)}>
                 Filter
             </button>
         </div>

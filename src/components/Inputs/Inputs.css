@@ -4,10 +4,20 @@
 
 .inputs {
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 .label {
-    min-width: 100px;
+    min-width: 70px;
+    padding: 5px 10px;
+    font-family: Cambria, serif;
+    font-size: 20px;
+}
+
+.input {
+    padding: 5px 10px;
 }
 
 .form-item {

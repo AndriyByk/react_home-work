@@ -4,12 +4,12 @@ import './App.css';
 import {carService} from "./services/car.service";
 import Form from "./components/Form/Form";
 import Cars from "./components/Cars/Cars";
-
+import {useForm} from "react-hook-form";
 
 function App() {
     const [allCars, setAllCars] = useState([]);
     const [allCarsInitial, setAllCarsInitial] = useState([]);
-    const [form, setForm] = useState({id: 0, model: '0', price: 0, year: 0})
+    const [trigger, setTrigger] = useState({});
 
     useEffect(() => {
         carService.getAll()
@@ -17,59 +17,49 @@ function App() {
                 setAllCars(value);
                 setAllCarsInitial(value);
             });
-    }, []);
+    }, [trigger]);
 
-    const filter = (e) => {
-        e.preventDefault();
+    const {
+        register,
+        handleSubmit
+    } = useForm();
+
+    const filter = (data) => {
+        console.log(data);
         setAllCars(allCarsInitial.filter(value => {
             return (
-                (+value.id === +form.id || form.id === 0 || form.id === '')
-                && (value.model.toUpperCase().includes(form.model.toUpperCase()) || form.model === '0' || form.model === '')
-                && (+value.price === +form.price || form.price === 0 || form.price === '' || form.price === '0')
-                && (+value.year === +form.year || form.year === 0 || form.year === '')
+                (+value.id === +data.id || data.id === '')
+                && (value.model.toUpperCase().includes(data.model.toUpperCase()) || data.model === '0' || data.model === '')
+                && (+value.price === +data.price || data.price === '')
+                && (+value.year === +data.year || data.year === '')
             )
         }));
     }
 
-    const create = () => {
-        carService.create({
-            model: form.model,
-            price: +form.price,
-            year: +form.year
-        }).catch(error => console.log(error));
+    const create = (data) => {
+        carService.create({model: data.model, price: data.price, year: data.year
+        }).then(value => setTrigger(value)).catch(error => console.log(error.response.data));
     }
 
-    const delete_item = (id) => {
-        console.log(id);
-        if (id !== undefined) {
-            carService.deleteById(id).catch(error => console.log(error))
-        } else {
-            carService.deleteById(form.id).catch(error => console.log(error))
-        }
+    const delete_item = (data) => {
+        carService.deleteById(data.id).then(value => setTrigger(value)).catch(error => console.log(error.response.data));
     }
 
-    const update = () => {
+    const update = (data) => {
         const car = {};
-        if (form.model !== '' && form.model !== '0')
-            car.model = form.model;
-        if (form.price !== '' && form.model !== '0' && form.model !== 0)
-            car.price = +form.price;
-        if (form.year !== '' && form.year !== '0' && form.year !== 0)
-            car.year = +form.year;
-        carService.updateById(form.id, car).catch(error => console.log(error))
-    }
-
-    const formHandler = (e) => {
-        let targetName = e.target.name;
-        let targetValue = e.target.value;
-        setForm({...form, [targetName]: targetValue});
-        console.log(form);
+        if (data.model !== '')
+            car.model = data.model;
+        if (data.price !== '')
+            car.price = +data.price;
+        if (data.year !== '')
+            car.year = +data.year;
+        carService.updateById(data.id, car).then(value => setTrigger(value)).catch(error => console.log(error.response.data));
     }
 
     return (
         <div className="App">
-            <Form filter={filter} create={create} delete_item={delete_item} update={update} form={form} formHandler={formHandler}/>
-            <Cars allCars={allCars} delete_item={delete_item}/>
+            <Form filter={filter} register={register} handleSubmit={handleSubmit} create={create} update={update} delete_item={delete_item}/>
+            <Cars allCars={allCars}/>
         </div>
     );
 }

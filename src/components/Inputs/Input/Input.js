@@ -3,7 +3,7 @@ import React from 'react';
 import '../Inputs.css';
 
 const Input = (props) => {
-    const {label, type, name, value, itemHandler} = props;
+    const {label, type, defaultValue, register, nameRegister} = props;
     return (
         <div className={'input-wrapper'}>
             <label>
@@ -12,7 +12,7 @@ const Input = (props) => {
                         {label}
                     </div>
                     <div className={'input'}>
-                        <input type={type} name={name} value={value} onChange={itemHandler}/>
+                        <input type={type} defaultValue={defaultValue} {...register(nameRegister)}/>
                     </div>
                 </div>
             </label>

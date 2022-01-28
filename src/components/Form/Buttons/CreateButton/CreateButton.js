@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CreateButton = ({create}) => {
+import './../../Form.css';
 
-
+const CreateButton = ({create, handleSubmit}) => {
     return (
         <div className={'button'}>
-            <button onClick={() => create()}>
+            <button onClick={handleSubmit(create)}>
                 Create
             </button>
         </div>

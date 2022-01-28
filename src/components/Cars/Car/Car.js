@@ -1,17 +1,15 @@
 import React from 'react';
-import DeleteButton from "../../Form/Buttons/DeleteButton/DeleteButton";
 
-const Car = ({car, delete_item}) => {
+import '../Cars.css';
+
+const Car = ({car}) => {
     const {id, model, price, year} = car;
     return (
-        <div>
-            <div>
-                <div>{id}</div>
-                <div>{model}</div>
-                <div>{price}</div>
-                <div>{year}</div>
-            </div>
-            <DeleteButton delete_item={delete_item} id={id}/>
+        <div className={'car'}>
+            <div className={"car-id"}>{id}</div>
+            <div className={"car-model"}>{model}</div>
+            <div className={"car-year"}>Year: {year}</div>
+            <div className={"car-price"}>Price: {price}</div>
         </div>
     );
 };

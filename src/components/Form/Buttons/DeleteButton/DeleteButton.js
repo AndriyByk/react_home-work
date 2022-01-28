@@ -1,9 +1,11 @@
 import React from 'react';
 
-const DeleteButton = ({delete_item, id}) => {
+import './../../Form.css';
+
+const DeleteButton = ({delete_item, handleSubmit}) => {
     return (
         <div className={'button'}>
-            <button onClick={()=> delete_item(id)}>
+            <button onClick={handleSubmit(delete_item)}>
                 Delete
             </button>
         </div>

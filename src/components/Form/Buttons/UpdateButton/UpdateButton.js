@@ -1,9 +1,11 @@
 import React from 'react';
 
-const UpdateButton = ({update}) => {
+import './../../Form.css';
+
+const UpdateButton = ({update, handleSubmit}) => {
     return (
         <div className={'button'}>
-            <button onClick={()=> update()}>
+            <button onClick={handleSubmit(update)}>
                 Update
             </button>
         </div>
