@@ -126,3 +126,55 @@
     width: 500px;
 }
 
+/*///////////////////////*/
+
+.albums-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 10px;
+    background-color: #d0d0d0;
+    flex-grow: 1;
+}
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.albums a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: #adadad;
+    margin-left: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.photo {
+    display: flex;
+    column-gap: 15px;
+}
+
+.photo img {
+    border-radius: 10px;
+    width: 350px;
+}
+
+.photo-info {
+    font-weight: bolder;
+}

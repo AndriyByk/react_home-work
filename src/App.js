@@ -8,6 +8,8 @@ import UserDetails from "./pages/Users/UserDetails";
 import PostDetails from "./pages/Posts/PostDetails";
 import Comments from "./pages/Posts/Comments";
 import UserPosts from "./pages/Users/UserPosts";
+import Albums from "./pages/Users/Albums";
+import Photos from "./pages/Users/Photos";
 
 function App() {
     return (
@@ -17,6 +19,9 @@ function App() {
                     <Route path={'/users'} element={<Users/>}>
                         <Route path={':id'} element={<UserDetails/>}>
                             <Route path={'posts'} element={<UserPosts/>}/>
+                        </Route>
+                        <Route path={'albumsOfUser:userId'} element={<Albums/>}>
+                            <Route path={'photosOfAlbum:albumId'} element={<Photos/>}/>
                         </Route>
                     </Route>
                     <Route path={'/posts'} element={<Posts/>}>
