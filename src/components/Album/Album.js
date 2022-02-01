@@ -7,7 +7,7 @@ const Album = ({album}) => {
 
     return (
         <div className={'album'}>
-            <Link to={`photosOfAlbum${album.id}`}>
+            <Link to={`${album.id}/photos`}>
                 <div>UserId: {album.userId}</div>
                 <div>AlbumId: {album.id}</div>
                 <div>Album title: {album.title}</div>

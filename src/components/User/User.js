@@ -11,7 +11,7 @@ const User = ({user}) => {
             <Link to={user.id.toString()} state={user}>
                 {id}) {name}
             </Link>
-            <Link to={`albumsOfUser${user.id}`}>
+            <Link to={`${user.id}/albums`}>
                 <button>Albums</button>
             </Link>
         </div>

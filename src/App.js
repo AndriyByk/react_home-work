@@ -21,8 +21,8 @@ function App() {
                         <Route path={':id'} element={<UserDetailsPage/>}>
                             <Route path={'posts'} element={<UserPostsPage/>}/>
                         </Route>
-                        <Route path={'albumsOfUser:userId'} element={<AlbumsPage/>}>
-                            <Route path={'photosOfAlbum:albumId'} element={<PhotosPage/>}/>
+                        <Route path={':userId/albums'} element={<AlbumsPage/>}>
+                            <Route path={':albumId/photos'} element={<PhotosPage/>}/>
                         </Route>
                     </Route>
                     <Route path={'/posts'} element={<PostsPage/>}>
