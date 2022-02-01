@@ -140,7 +140,7 @@
 .albums {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: 13px;
     background-color: grey;
     padding: 10px;
     border-radius: 10px;
@@ -150,7 +150,10 @@
     font-size: 15px;
     text-decoration: none;
     color: white;
+}
 
+.album {
+    border-bottom: black solid 1px;
 }
 
 .photos {
@@ -176,5 +179,5 @@
 }
 
 .photo-info {
-    font-weight: bolder;
+    width: 250px;
 }

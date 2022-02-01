@@ -8,7 +8,9 @@ const Album = ({album}) => {
     return (
         <div className={'album'}>
             <Link to={`photosOfAlbum${album.id}`}>
-            albumId-{album.id} (userId-{album.userId}) {album.title}
+                <div>UserId: {album.userId}</div>
+                <div>AlbumId: {album.id}</div>
+                <div>Album title: {album.title}</div>
             </Link>
         </div>
     );
