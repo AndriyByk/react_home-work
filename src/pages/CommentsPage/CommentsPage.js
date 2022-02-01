@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
-import {postService} from "../../services/post.service";
-import Comment from "../../components/Comment/Comment";
+import {postService} from "../../services";
+import {Comment} from "../../components";
 
-const Comments = () => {
+const CommentsPage = () => {
     const [comments, setComments] = useState([]);
 
     const {id} = useParams();
@@ -23,4 +23,4 @@ const Comments = () => {
     );
 };
 
-export default Comments;
+export {CommentsPage};

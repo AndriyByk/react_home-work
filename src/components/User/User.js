@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import './../../pages/Home.css';
+import '../../pages/HomePage/HomePage.css';
 
 const User = ({user}) => {
     const {id, name} = user;
@@ -18,4 +18,4 @@ const User = ({user}) => {
     );
 };
 
-export default User;
+export {User};

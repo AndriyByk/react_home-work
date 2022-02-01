@@ -1,32 +1,33 @@
 import {Route, Routes} from "react-router-dom";
 
 import './App.css';
-import Home from "./pages/Home";
-import Users from "./pages/Users/Users";
-import Posts from "./pages/Posts/Posts";
-import UserDetails from "./pages/Users/UserDetails";
-import PostDetails from "./pages/Posts/PostDetails";
-import Comments from "./pages/Posts/Comments";
-import UserPosts from "./pages/Users/UserPosts";
-import Albums from "./pages/Users/Albums";
-import Photos from "./pages/Users/Photos";
+import {
+    AlbumsPage, CommentsPage,
+    HomePage,
+    PhotosPage,
+    PostDetailsPage,
+    PostsPage,
+    UserDetailsPage,
+    UserPostsPage,
+    UsersPage
+} from "./pages";
 
 function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path={'/'} element={<Home/>}>
-                    <Route path={'/users'} element={<Users/>}>
-                        <Route path={':id'} element={<UserDetails/>}>
-                            <Route path={'posts'} element={<UserPosts/>}/>
+                <Route path={'/'} element={<HomePage/>}>
+                    <Route path={'/users'} element={<UsersPage/>}>
+                        <Route path={':id'} element={<UserDetailsPage/>}>
+                            <Route path={'posts'} element={<UserPostsPage/>}/>
                         </Route>
-                        <Route path={'albumsOfUser:userId'} element={<Albums/>}>
-                            <Route path={'photosOfAlbum:albumId'} element={<Photos/>}/>
+                        <Route path={'albumsOfUser:userId'} element={<AlbumsPage/>}>
+                            <Route path={'photosOfAlbum:albumId'} element={<PhotosPage/>}/>
                         </Route>
                     </Route>
-                    <Route path={'/posts'} element={<Posts/>}>
-                        <Route path={':id'} element={<PostDetails/>}>
-                            <Route path={'comments'} element={<Comments/>}/>
+                    <Route path={'/posts'} element={<PostsPage/>}>
+                        <Route path={':id'} element={<PostDetailsPage/>}>
+                            <Route path={'comments'} element={<CommentsPage/>}/>
                         </Route>
                     </Route>
                 </Route>

@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 
-import {userService} from "../../services/user.service";
-import './../Home.css';
+import {userService} from "../../services";
+import '../HomePage/HomePage.css';
 
-const UserDetails = () => {
+const UserDetailsPage = () => {
     const [user, setUser] = useState({});
     const {id} = useParams();
     const location = useLocation();
@@ -34,4 +34,4 @@ const UserDetails = () => {
     );
 };
 
-export default UserDetails;
+export {UserDetailsPage};

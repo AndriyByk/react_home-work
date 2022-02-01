@@ -1,17 +1,17 @@
 import React from 'react';
 
-import './../../pages/Home.css';
+import '../../pages/HomePage/HomePage.css';
 
 const UserPost = ({post}) => {
     const {userId, id, title, body} = post;
     return (
         <div className={'user-post'}>
-            <div>{userId}</div>
-            <div>{id}</div>
-            <div>{title}</div>
-            <div>{body}</div>
+            <div>UserId: {userId}</div>
+            <div>PostId: {id}</div>
+            <div>Post title: {title}</div>
+            <div>Post body: {body}</div>
         </div>
     );
 };
 
-export default UserPost;
+export {UserPost};

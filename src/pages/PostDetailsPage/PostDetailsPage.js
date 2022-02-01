@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 
-import {postService} from "../../services/post.service";
-import './../Home.css';
+import {postService} from "../../services";
+import '../HomePage/HomePage.css';
 
-const PostDetails = () => {
+const PostDetailsPage = () => {
     const [post, setPost] = useState({});
     const {id} = useParams();
 
@@ -32,4 +32,4 @@ const PostDetails = () => {
     );
 };
 
-export default PostDetails;
+export {PostDetailsPage};

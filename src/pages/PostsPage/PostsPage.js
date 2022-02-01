@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Link, Outlet} from "react-router-dom";
 
-import {postService} from "../../services/post.service";
-import Post from "../../components/Post/Post";
-import './../Home.css';
+import {postService} from "../../services";
+import '../HomePage/HomePage.css';
+import {Post} from "../../components";
 
-const Posts = () => {
+const PostsPage = () => {
     const [allPosts, setAllPosts] = useState([]);
 
     useEffect(() => {
@@ -28,4 +28,4 @@ const Posts = () => {
     );
 };
 
-export default Posts;
+export {PostsPage};

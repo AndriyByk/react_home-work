@@ -1,19 +1,19 @@
 import React from 'react';
 
-import './../../pages/Home.css';
+import '../../pages/HomePage/HomePage.css';
 
 const Comment = ({comment}) => {
     const {postId, id, name, email, body} = comment;
 
     return (
         <div className={'comment'}>
-            <div>{postId}</div>
-            <div>{id}</div>
-            <div>{name}</div>
-            <div>{email}</div>
-            <div>{body}</div>
+            <div>PostId: {postId}</div>
+            <div>Id: {id}</div>
+            <div>Name: {name}</div>
+            <div>Email: {email}</div>
+            <div>Body: {body}</div>
         </div>
     );
 };
 
-export default Comment;
+export {Comment};

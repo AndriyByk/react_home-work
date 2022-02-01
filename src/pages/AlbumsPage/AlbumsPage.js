@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {Outlet, useParams} from "react-router-dom";
 
-import Album from "../../components/Album/Album";
-import {albumService} from "../../services/album.service";
-import './../Home.css';
+import {albumService} from "../../services";
+import '../HomePage/HomePage.css';
+import {Album} from "../../components";
 
-const Albums = () => {
+const AlbumsPage = () => {
 
     const [albums, setAlbums] = useState([]);
     const {userId} = useParams();
@@ -26,4 +26,4 @@ const Albums = () => {
     );
 };
 
-export default Albums;
+export {AlbumsPage};

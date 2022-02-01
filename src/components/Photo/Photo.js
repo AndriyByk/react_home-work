@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './../../pages/Home.css';
+import '../../pages/HomePage/HomePage.css';
 
 const Photo = ({photo}) => {
 
@@ -18,4 +18,4 @@ const Photo = ({photo}) => {
     );
 };
 
-export default Photo;
+export {Photo};

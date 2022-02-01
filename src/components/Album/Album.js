@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import './../../pages/Home.css';
+import '../../pages/HomePage/HomePage.css';
 
 const Album = ({album}) => {
 
@@ -16,4 +16,4 @@ const Album = ({album}) => {
     );
 };
 
-export default Album;
+export {Album};

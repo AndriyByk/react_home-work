@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './../../pages/Home.css';
+import '../../pages/HomePage/HomePage.css';
 
 const Post = ({post}) => {
     const {id, title} = post;
@@ -11,4 +11,4 @@ const Post = ({post}) => {
     );
 };
 
-export default Post;
+export {Post};

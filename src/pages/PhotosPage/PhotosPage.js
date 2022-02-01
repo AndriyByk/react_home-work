@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
-import Photo from "../../components/Photo/Photo";
-import {photosService} from "../../services/photos.service";
-import './../Home.css';
+import {photosService} from "../../services";
+import '../HomePage/HomePage.css';
+import {Photo} from "../../components";
 
-const Photos = () => {
+const PhotosPage = () => {
 
     const[photos, setPhotos] = useState([]);
     const {albumId} = useParams();
@@ -23,4 +23,4 @@ const Photos = () => {
     );
 };
 
-export default Photos;
+export {PhotosPage};
