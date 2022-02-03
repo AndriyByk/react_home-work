@@ -1,0 +1,13 @@
+.reset-button {
+    width: 150px;
+    background-color: silver;
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

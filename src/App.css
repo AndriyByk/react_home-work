@@ -1,0 +1,39 @@
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    padding: 50px;
+    border-radius: 50px 0 0 0;
+    background-color: grey;
+    box-sizing: border-box;
+    border-right: dimgrey solid 10px;
+    border-left: dimgrey solid 10px;
+}
+
+.lists-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+}
+
+.lists {
+    background-color: grey;
+    border-right: dimgrey solid 10px;
+    border-left: dimgrey solid 10px;
+    border-radius: 0 0 50px 0;
+    width: 500px;
+    padding: 50px;
+    box-sizing: border-box;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
