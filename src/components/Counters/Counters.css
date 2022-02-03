@@ -1,0 +1,15 @@
+.counter {
+    background-color: chocolate;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.counter-buttons {
+    display: flex;
+}
+
+.counter-title {
+    color: white;
+
+    font-family: Cambria, sans-serif;
+}
