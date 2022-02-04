@@ -1,5 +1,11 @@
 import './App.css';
 
+// * реализовать обновление машин
+// ** добавить валидацыю к форме
+// *** добавить еще 3 слайса для users, posts и comments
+//    и реализовать роутинг между переключением по страницам UsersPage, PostsPage, CommentsPage, CarsPage
+//    (c плейсхолдера достаточно просто вывести все по каждой сущности)
+
 function App() {
   return (
     <div className="App">
