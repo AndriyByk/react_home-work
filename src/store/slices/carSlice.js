@@ -26,10 +26,13 @@ export const createCar = createAsyncThunk(
     'carSlice/createCar',
     async ({data}, {rejectWithValue, dispatch}) => {
         try {
-            if (data.id === "" || data.model === "" || data.price === "" || data.year === "")
-                return "Помилка. Жодне поле окрім ID не може бути пустим. Будь ласка, заповніть.";
+            if (data.model === "" || data.price === "" || data.year === "")
+                return "Помилка. Заповніть всі поля окрім \"Id\".";
+            if (data.id !== '')
+                return "Помилка. Поле Id має залишатись пустим";
+
             const newCar = await carService.create(data);
-            dispatch(addCar({data: newCar}))
+            dispatch(addCar({data: newCar}));
         } catch (e) {
             return rejectWithValue(e.message);
         }

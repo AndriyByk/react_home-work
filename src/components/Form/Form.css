@@ -39,4 +39,8 @@ form {
     row-gap: 5px;
     color: black;
     font-size: 11px;
+    background-color: #fd9d9d;
+    height: fit-content;
+    border-left: #9b2a2a solid 1px;
+    margin: 3px;
 }
