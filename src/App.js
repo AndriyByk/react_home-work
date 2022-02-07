@@ -5,14 +5,24 @@
 //    и реализовать роутинг между переключением по страницам UsersPage, PostsPage, CommentsPage, CarsPage
 //    (c плейсхолдера достаточно просто вывести все по каждой сущности)
 
+import {Route, Routes} from "react-router-dom";
+
 import './App.css';
+import {HomePage, UsersPage,PostsPage, CommentsPage, CarsPage} from "./pages";
 
 function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path={'/'} element={<HomePage/>}>
+                    <Route path={'/cars'} element={<CarsPage/>}/>
+                    <Route path={'/users'} element={<UsersPage/>}/>
+                    <Route path={'/posts'} element={<PostsPage/>}/>
+                    <Route path={'/comments'} element={<CommentsPage/>}/>
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

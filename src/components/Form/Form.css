@@ -1,0 +1,42 @@
+form {
+    display: flex;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 200px;
+    justify-content: center;
+}
+
+.button > button {
+    width: 90px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.documentation {
+    padding: 5px 20px;
+    background-color: #f8ccbe;
+    font-family: Cambria, serif;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.documentation-title {
+    text-align: center;
+    font-size: 19px;
+}
+
+.errors {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    color: black;
+    font-size: 11px;
+}

@@ -1,0 +1,14 @@
+.home-page, .home-page a {
+    display: flex;
+    column-gap: 20px;
+    padding: 10px;
+    background-color: cornflowerblue;
+}
+
+.home-page a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #3161b9;
+    border-radius: 10px;
+}

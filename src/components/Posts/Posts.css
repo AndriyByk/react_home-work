@@ -1,0 +1,18 @@
+.posts {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    background-color: #e38282;
+    box-sizing: border-box;
+    color: white;
+}
+
+.post {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #9b2a2a;
+    border-radius: 5px;
+    width: 350px;
+}

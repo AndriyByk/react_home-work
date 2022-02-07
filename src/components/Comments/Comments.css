@@ -1,0 +1,18 @@
+.comments {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    background-color: #99af80;
+    box-sizing: border-box;
+    color: white;
+}
+
+.comment {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #1c541c;
+    border-radius: 5px;
+    width: 350px;
+}

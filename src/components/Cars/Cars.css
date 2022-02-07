@@ -1,0 +1,30 @@
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 30px 20px;
+    font-family: Cambria, serif;
+}
+
+.car {
+    padding: 20px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.car-model {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.car-year {
+    font-style: italic;
+}
+
+.car-price {
+    padding-top: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+}
